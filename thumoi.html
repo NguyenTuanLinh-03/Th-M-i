@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Mời Lễ Tốt Nghiệp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap');
+        
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .decoration-line {
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            height: 2px;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .sparkle {
+            position: absolute;
+            color: #ffd700;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen flex items-center justify-center p-4 font-inter">
+    <div class="relative">
+        <!-- Sparkle decorations -->
+        <div class="sparkle text-2xl" style="top: 10%; left: 15%; animation-delay: 0s;">✨</div>
+        <div class="sparkle text-xl" style="top: 20%; right: 20%; animation-delay: 0.5s;">⭐</div>
+        <div class="sparkle text-lg" style="bottom: 25%; left: 10%; animation-delay: 1s;">✨</div>
+        <div class="sparkle text-xl" style="bottom: 15%; right: 15%; animation-delay: 1.5s;">⭐</div>
+        
+        <!-- Main invitation card -->
+        <div class="bg-white rounded-2xl card-shadow max-w-2xl w-full mx-auto overflow-hidden float-animation">
+            <!-- Header with graduation cap -->
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-8 px-6 relative">
+                <div class="text-6xl mb-4">🎓</div>
+                <h1 class="font-playfair text-3xl md:text-4xl font-bold mb-2">THƯ MỜI</h1>
+                <div class="decoration-line w-24 mx-auto"></div>
+            </div>
+            
+            <!-- Main content -->
+            <div class="p-8 md:p-12 text-center">
+                <h2 class="font-playfair text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
+                    LỄ TỐT NGHIỆP
+                </h2>
+                
+                <div class="space-y-6 text-gray-700">
+                    <p class="text-lg leading-relaxed">
+                        Kính mời <span class="font-semibold text-blue-600">NGUYỄN MINH TÀI </span> 
+                        tham dự buổi lễ tốt nghiệp của
+                    </p>
+                    
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 my-8">
+                        <h3 class="font-playfair text-2xl font-bold text-gray-800 mb-2">
+                            Nguyễn Tuấn Linh
+                        </h3>
+                        <p class="text-lg text-gray-600">
+                            Ngành: <span class="font-medium">Công Nghệ Thông Tin</span>
+                        </p>
+                        <p class="text-lg text-gray-600">
+                            Trường: <span class="font-medium">Trường kinh tế kỹ thuật công nghiệp</span>
+                        </p>
+                    </div>
+                    
+                    <!-- Event details -->
+                    <div class="grid md:grid-cols-2 gap-6 my-8">
+                        <div class="bg-white border-2 border-blue-100 rounded-xl p-6">
+                            <div class="text-3xl mb-3">📅</div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Thời gian</h4>
+                            <p class="text-gray-600">16/08/2025</p>
+                            <p class="text-gray-600">9:00</p>
+                        </div>
+                        
+                        <div class="bg-white border-2 border-purple-100 rounded-xl p-6">
+                            <div class="text-3xl mb-3">📍</div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Địa điểm</h4>
+                            <p class="text-gray-600">Trường kinh tế kỹ thuật công nghiệp Hà Nội</p>
+                            <p class="text-gray-600">Số 218 Lĩnh Nam, Phường Lĩnh Nam, Quận Hoàng Mai, TP Hà Nội.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-xl">
+                        <p class="text-gray-700 italic">
+                            "Sự có mặt của quý khách sẽ là niềm vinh hạnh và động lực lớn lao cho chúng tôi trong ngày đặc biệt này."
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- RSVP Button -->
+                <div class="mt-8">
+                    <button onclick="handleRSVP()" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-full transform transition-all duration-300 hover:scale-105 shadow-lg">
+                        Xác nhận tham dự
+                    </button>
+                </div>
+                
+                <!-- Contact info -->
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <p class="text-sm text-gray-600 mb-2">Liên hệ để xác nhận:</p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm text-gray-700">
+                        <div class="flex items-center gap-2">
+                            <span>📞</span>
+                            <span>090449936</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span>✉️</span>
+                            <span>tuanlinh120803@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer decoration -->
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 h-2"></div>
+        </div>
+    </div>
+
+    <script>
+        function handleRSVP() {
+            // Create a simple RSVP confirmation
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50';
+            modal.innerHTML = `
+                <div class="bg-white rounded-2xl p-8 max-w-md w-full text-center transform transition-all duration-300 scale-95">
+                    <div class="text-6xl mb-4">🎉</div>
+                    <h3 class="font-playfair text-2xl font-bold text-gray-800 mb-4">Cảm ơn bạn!</h3>
+                    <p class="text-gray-600 mb-6">Chúng tôi đã ghi nhận xác nhận tham dự của bạn. Hẹn gặp bạn tại buổi lễ!</p>
+                    <button onclick="this.parentElement.parentElement.remove()" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                        Đóng
+                    </button>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Add animation
+            setTimeout(() => {
+                modal.querySelector('div').classList.remove('scale-95');
+                modal.querySelector('div').classList.add('scale-100');
+            }, 10);
+        }
+        
+        // Add some interactive sparkles on click
+        document.addEventListener('click', function(e) {
+            if (e.target.tagName !== 'BUTTON') {
+                const sparkle = document.createElement('div');
+                sparkle.innerHTML = '✨';
+                sparkle.className = 'fixed text-yellow-400 text-xl pointer-events-none z-40';
+                sparkle.style.left = e.clientX + 'px';
+                sparkle.style.top = e.clientY + 'px';
+                sparkle.style.animation = 'sparkle 1s ease-out forwards';
+                
+                document.body.appendChild(sparkle);
+                
+                setTimeout(() => sparkle.remove(), 1000);
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'967604cd7726e885',t:'MTc1Mzg5MDcwMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
